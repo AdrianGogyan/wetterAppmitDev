@@ -1,35 +1,38 @@
 @import "mixins";
-@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "variables";
+@import "detailView";
 
-*{
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
     margin: 0;
     padding: 0;
 }
-body{
-    @include largeScreen{
+body {
+    @include largeScreen {
         background-color: gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100dvh;
+        background-color: lighten($color: $background, $amount: 10);
     }
 }
 
-
-#app{
+#app {
     font-family: "Inter", sans-serif;
-    background-color: rgb(18, 18, 18);
+    background:linear-gradient(0deg, $elevation-2 0%, $background 50%);
     color: white;
     padding: 1rem;
     min-height: 100vh;
-    @include largeScreen{
+
+    @include largeScreen {
         width: 350px;
         height: 800px;
         min-height: unset;
         overflow: auto;
         border-radius: 8px;
         box-shadow: 1px 1px 8px 8px black;
-    
+        box-shadow: $box-shadow;
     }
-   
 }
