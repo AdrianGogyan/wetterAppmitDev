@@ -1,5 +1,6 @@
 @import "mixins";
 @import "variables";
+@import "loading";
 @import "detailView";
 
 @import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -8,6 +9,8 @@
     margin: 0;
     padding: 0;
 }
+
+
 body {
     @include largeScreen {
         background-color: gray;
@@ -23,12 +26,12 @@ body {
     font-family: "Inter", sans-serif;
     background:linear-gradient(0deg, $elevation-2 0%, $background 50%);
     color: white;
-    padding: 1rem;
+    // padding: 1rem;
     min-height: 100vh;
 
     @include largeScreen {
         width: 350px;
-        height: 800px;
+        height: $max-height-desktop;
         min-height: unset;
         overflow: auto;
         border-radius: 8px;

@@ -6,4 +6,4 @@ export const rootElement = document.getElementById("app");
 
 
 
-loadDetailView();
+loadDetailView("Budapest");

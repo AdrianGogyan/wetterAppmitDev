@@ -1,11 +1,13 @@
 import { rootElement } from "../main";
 import { getForecastWeather } from "./api";
+import { renderLoadingScreen } from "./loading";
 import { formatTemperatur } from "./utils";
 
-export async function loadDetailView(){
+export async function loadDetailView(cityName){
     //loading screen
+    renderLoadingScreen("Lade Wetter für " + cityName + "...");
     // daten fetchen
-    const weatherData = await getForecastWeather("Mannheim");
+    const weatherData = await getForecastWeather(cityName);
     // detail view rendern
     renderDetailView(weatherData);
     // eventlistener registrieren
